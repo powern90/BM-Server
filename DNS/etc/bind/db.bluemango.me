@@ -1,0 +1,23 @@
+$TTL    86400
+@       IN      SOA     ns1.bluemango.me. admin.bluemango.me. (
+                  4     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+;
+; name servers - NS records
+     IN      NS      ns1.bluemango.me.
+; name servers - MX records
+bluemango.me.     IN      MX     10 mail.bluemango.me.
+
+; name servers - A records
+ns1          IN      A       223.194.43.62
+ns2          IN      A       223.194.43.63
+esxi         IN      A       223.194.43.60
+vpn          IN      A       223.194.43.91
+mail         IN      A       223.194.43.64
+gitlab       IN      A       223.194.43.65
+@            IN      TXT     "v=spf1 mx ~all"
+dkim._domainkey	IN   TXT "v=DKIM1; p=""MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7fQOzC/w+goV/JbWevnT""vmIRFX+XXAleZo0saRrv/FcH72dgzSpdWg9R9BoeHxgPIi75UzmAxfxIeUN7YAAQ""JDiFRato7ixtLfamz7TpOEcm/Po1SVjawwzTzJCwdVWB0HJZgwqCF2P4WoKTmMXH""RMGF0bjgCpPPtOBJof7IeQ/hEjzCFu4zUe++Q0Nk8gERPrqw+rlbQAZZIeaMrKD5""+HtLxCusxLDNbbECBBd6AnQFPDIK/41G7LZcB4AJ8NYeinNi5JTazOKHvtnuKE25""SIhKCn8E4yFX7ElWgc3OTDk1y1YlnXXVErA6fSqvLeBMfK56TVnvaX4IHLbJzaAC""gwIDAQAB"
+_dmarc       IN      TXT     "v=DMARC1; p=none; pct=100; rua=mailto:dmarc@bluemango.me"

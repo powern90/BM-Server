@@ -1,0 +1,16 @@
+$TTL    604800
+@       IN      SOA     ns1.bluemango.me. admin.bluemango.me. (
+                             10         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; name servers
+      IN      NS      ns1.bluemango.me.
+
+; PTR Records
+62   IN      PTR     ns1.bluemango.me.
+63   IN      PTR     ns2.bluemango.me.
+60   IN      PTR     esxi.bluemango.me.
+61   IN      PTR     vpn.bluemango.me.
+64   IN      PTR     mail.bluemango.me.
